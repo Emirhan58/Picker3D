@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Commands.Level
+namespace Runtime.Commands.Level
 {
     public class OnLevelLoaderCommand
     {

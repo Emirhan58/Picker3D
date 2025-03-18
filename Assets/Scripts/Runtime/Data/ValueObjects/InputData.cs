@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
-namespace Data.ValueObjects
+
+namespace Runtime.Data.ValueObjects
 {
     [Serializable]
     public struct InputData
