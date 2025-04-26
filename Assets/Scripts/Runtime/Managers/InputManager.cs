@@ -127,13 +127,15 @@ namespace Runtime.Managers
                         // Sola doğru yeterli miktarda sürüklendiyse:
                         else if (mouseDeltaPos.x < -_data.HorizontalInputSpeed)
                         {
-                            _moveVector.x = _data.HorizontalInputSpeed / 10f * mouseDeltaPos.x;
+                            _moveVector.x = -_data.HorizontalInputSpeed / 10f * -mouseDeltaPos.x;
                         }
                         else
                         {
                             // Sürükleme miktarı küçükse veya hareketsizse hareketi yumuşakça durdur.
-                            _moveVector.x = Mathf.SmoothDamp(-_moveVector.x, 0, ref _currentVelocity, _data.HorizontalInputSpeed);
+                            _moveVector.x = Mathf.SmoothDamp(-_moveVector.x, 0, ref _currentVelocity, _data.ClampSpeed);
                         }
+                        
+                        _moveVector.x = mouseDeltaPos.x;
 
                         // Bir sonraki frame için şu anki pozisyon güncellenir.
                         _mousePosition = (Vector2)Input.mousePosition;

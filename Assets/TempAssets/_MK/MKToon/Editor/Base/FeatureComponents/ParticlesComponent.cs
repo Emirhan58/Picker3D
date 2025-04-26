@@ -117,7 +117,7 @@ namespace MK.Toon.Editor
 
             foreach (var obj in  materialEditor.targets)
             {
-                ParticleSystemRenderer[] renderers = UnityEngine.Object.FindObjectsOfType(typeof(ParticleSystemRenderer)) as ParticleSystemRenderer[];
+                ParticleSystemRenderer[] renderers = UnityEngine.Object.FindObjectsByType<ParticleSystemRenderer>(FindObjectsSortMode.None);
                 foreach (ParticleSystemRenderer renderer in renderers)
                 {
                     if (renderer.sharedMaterial == material)

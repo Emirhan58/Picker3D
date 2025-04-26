@@ -334,9 +334,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965622581}
-  - component: {fileID: 965622580}
-  - component: {fileID: 965622579}
   - component: {fileID: 965622578}
+  - component: {fileID: 965622579}
+  - component: {fileID: 965622580}
   m_Layer: 0
   m_Name: UIRoot
   m_TagString: Untagged
@@ -556,6 +556,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1812650187}
   - component: {fileID: 1812650189}
+  - component: {fileID: 1812650192}
+  - component: {fileID: 1812650191}
+  - component: {fileID: 1812650190}
   - component: {fileID: 1812650188}
   m_Layer: 0
   m_Name: CameraManager
@@ -573,7 +576,7 @@ Transform:
   m_GameObject: {fileID: 1812650186}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10007885, y: 0.4306352, z: -0.048198853, w: 0.8956643}
-  m_LocalPosition: {x: -4.274851, y: 0.45118213, z: -2.4995408}
+  m_LocalPosition: {x: 2.364569, y: 0.45118213, z: -2.4995408}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -635,6 +638,51 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1812650190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812650186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6683036c24424edeaacc69d59dd4daa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XClampValue: 0
+--- !u!114 &1812650191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812650186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afa82ae3200b82408d605c3dbdd1e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 0
+--- !u!114 &1812650192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812650186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 1
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 5, z: -10}
 --- !u!1 &2039729880
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +892,7 @@ Transform:
   m_GameObject: {fileID: 2045417469}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10007885, y: 0.4306352, z: -0.048198853, w: 0.8956643}
-  m_LocalPosition: {x: -6.6394196, y: 2.584282, z: -3.0264568}
+  m_LocalPosition: {x: 0, y: 2.584282, z: -3.0264568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

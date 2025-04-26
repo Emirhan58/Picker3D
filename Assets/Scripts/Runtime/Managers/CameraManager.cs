@@ -46,8 +46,9 @@ namespace Runtime.Managers
         
         private void OnSetCameraTarget()
         {
-            //var player =  FindAnyObjectByType<PlayerManager>().transform;
-            //virtualCamera.Follow = player;
+            var player =  FindAnyObjectByType<PlayerManager>().transform;
+            virtualCamera.Follow = player;
+            Debug.LogWarning("Executed ---> OnSetCameraTarget");
             //virtualCamera.LookAt = player;
         }
         private void OnReset()

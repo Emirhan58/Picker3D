@@ -32,7 +32,7 @@ namespace Runtime.Managers
 
         private void OnLevelInitialize(byte arg0)
         {
-            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Level, 0);
+            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Start, 0);
             UISignals.Instance.onSetLevelValue?.Invoke((byte)CoreGameSignals.Instance.onGetLevelValue?.Invoke());
         }
 
@@ -60,8 +60,9 @@ namespace Runtime.Managers
             Debug.LogWarning("Executed ---> Play");
             UISignals.Instance.onPlay?.Invoke();
             CoreUISignals.Instance.onClosePanel?.Invoke(1);
+            CoreUISignals.Instance.onOpenPanel?.Invoke(UIPanelTypes.Level, 0);
             InputSignals.Instance.onEnableInput?.Invoke();
-            //CameraSignals.Instance.onSetCameraTarget?.Invoke();
+            CameraSignals.Instance.onSetCameraTarget?.Invoke();
         }
         
         public void NextLevel()
